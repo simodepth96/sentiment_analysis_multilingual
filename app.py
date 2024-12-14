@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import streamlit as st
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import io
 
 # Load model and tokenizer
 tokenizer = AutoTokenizer.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
@@ -97,8 +98,14 @@ if uploaded_file is not None:
 
         # Option to download the results as an Excel file
         st.download_button(
-            label="Download sentiment analysis results",
-            data=df_2.to_excel(index=False).encode(),
+            excel_buffer = io.BytesIO()
+            df_2.to_excel(excel_buffer, index=False)
+            excel_buffer.seek(0)  # Move to the start of the buffer
+
+        # Then in your Streamlit download button
+        st.download_button(
+            label="Download Excel file",
+            data=excel_buffer.getvalue(),
             file_name="sentiment_analysis_results.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
