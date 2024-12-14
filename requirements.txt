@@ -1,6 +1,6 @@
-pip install torch==2.2.2
-pip install streamlit
-pip install pandas
-pip install transformers
-pip install matplotlib
-pip install numpy
+streamlit==1.14.0
+pandas
+torch==2.2.2
+transformers
+matplotlib==3.8.0
+numpy==1.24.3
