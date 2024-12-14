@@ -96,11 +96,10 @@ if uploaded_file is not None:
         # Show the plot in Streamlit
         st.pyplot(fig)
 
-        # Option to download the results as an Excel file
-        st.download_button(
-            excel_buffer = io.BytesIO()
-            df_2.to_excel(excel_buffer, index=False)
-            excel_buffer.seek(0)  # Move to the start of the buffer
+        # Save the results to an Excel buffer for download
+        excel_buffer = io.BytesIO()
+        df_2.to_excel(excel_buffer, index=False)
+        excel_buffer.seek(0)  # Move to the start of the buffer
 
         # Then in your Streamlit download button
         st.download_button(
