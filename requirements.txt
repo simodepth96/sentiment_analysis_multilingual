@@ -1,8 +1,8 @@
-streamlit==1.19.0
 pandas==1.5.3
 torch==2.1.0
 transformers==4.33.2
 matplotlib==3.8.0
 numpy==1.24.3
-openpyxl>=3.0.0
 streamlit==1.14.0
+altair==4.2.0
+openpyxl
