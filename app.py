@@ -3,10 +3,12 @@ import torch
 import matplotlib.pyplot as plt
 import numpy as np
 import streamlit as st
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import io
 import plotly.express as px
+from transformers import pipeline
 
+sentiment_pipeline = pipeline("sentiment-analysis", 
+                               model="nlptown/bert-base-multilingual-uncased-sentiment")
 # Load model and tokenizer
 tokenizer = AutoTokenizer.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
 model = AutoModelForSequenceClassification.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
