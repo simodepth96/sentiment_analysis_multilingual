@@ -20,4 +20,4 @@ Compared to other models, such as [cardiffnlp/twitter-roberta-base-sentiment-lat
 3. **Fine-tuned to Multilanguage text**. This model is able to capture the linguistic nuances from different langauges. Accuracy could be improved but still it does the job.
 
 
-![App Screenshot](Screenshot 2024-12-15 112603.png)
+![App Screenshot](Screenshot%202024-12-15%20112603.png)
