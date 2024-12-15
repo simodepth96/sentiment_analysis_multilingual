@@ -1,4 +1,4 @@
-# sentiment_analysis_multilingual
+# Multilingual Sentiment Analysis on Product Reviews
 
 This is a [bert-base-multilingual-uncased](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) model finetuned for sentiment analysis on product reviews in six languages: 
 - English
