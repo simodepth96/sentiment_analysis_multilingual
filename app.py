@@ -29,11 +29,10 @@ def analyze_sentiment(review):
     return predicted_class + 1  # Ratings are 1-indexed
 
 # Streamlit app
-st.title("Review Rating Distribution")
-st.subheader(
+st.title("Multilingual Sentiment Analysis on Product Reviews")
+st.markdown(
     "This app is designed to employ a distilBERT model to take on reviews in different languages and return a score ranged 1-5 to indicate the sentiment magnitude. "
     "A pie chart with the distribution of the score is also returned. "
-    "N.b - the script reads in reviews from the 'review' header from an XLSX file."
 )
 
 # File upload widget
