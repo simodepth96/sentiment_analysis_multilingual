@@ -5,6 +5,7 @@ import numpy as np
 import streamlit as st
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import io
+import plotly.express as px
 
 # Load model and tokenizer
 tokenizer = AutoTokenizer.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
