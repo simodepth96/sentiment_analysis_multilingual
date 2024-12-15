@@ -10,22 +10,6 @@ import io
 tokenizer = AutoTokenizer.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
 model = AutoModelForSequenceClassification.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment")
 
-# Define a function to calculate and classify emotion
-def calculate_emotion(smag):
-    if smag > 0 and smag < 2:
-        sent_m_label = "Poor"
-    elif smag >= 5:
-        sent_m_label = "Positive"
-    elif smag > 3 and smag < 4:
-        sent_m_label = "Neutral"
-    elif smag >= 2 and smag <= 3:
-        sent_m_label = "Poor"
-    elif smag >= 4 and smag < 5:
-        sent_m_label = "Neutral"
-    else:
-        sent_m_label = "Undefined Emotion"
-    return sent_m_label
-
 # Perform sentiment analysis
 def analyze_sentiment(review):
     inputs = tokenizer.encode_plus(
