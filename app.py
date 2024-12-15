@@ -30,6 +30,11 @@ def analyze_sentiment(review):
 
 # Streamlit app
 st.title("Review Rating Distribution")
+st.subheader(
+    "This app is designed to employ a distilBERT model to take on reviews in different languages and return a score ranged 1-5 to indicate the sentiment magnitude. "
+    "A pie chart with the distribution of the score is also returned. "
+    "N.b - the script reads in reviews from the 'review' header from an XLSX file."
+)
 
 # File upload widget
 uploaded_file = st.file_uploader("Upload your Excel file with a 'review' column", type=["xlsx"])
