@@ -57,41 +57,8 @@ if uploaded_file is not None:
         # Perform sentiment analysis on the reviews
         df_2['sentiment'] = df_2['review'].apply(analyze_sentiment)
 
-        # Prepare data for the scatter plot
-        predictedY = []
-        emotion_labels = []
-        plotcolors = []
-
-        for sentiment_value in df_2['sentiment']:
-            smag = sentiment_value  # Assuming sentiment_value is used as the magnitude
-            predictedY.append(smag)
-
-            emotion_label = calculate_emotion(smag)
-            emotion_labels.append(emotion_label)
-
-            # Set the color based on emotion level
-            if smag > 0 and smag < 2:
-                plotcolors.append('red')
-            elif smag >= 5:
-                plotcolors.append('green')
-            elif smag > 3 and smag < 4:
-                plotcolors.append('yellow')
-            elif smag >= 2 and smag <= 3:
-                plotcolors.append('red')
-            elif smag >= 4 and smag < 5:
-                plotcolors.append('yellow')
-            else:
-                plotcolors.append('gray')
-
-        # Display the scatter plot
-        fig, ax = plt.subplots(figsize=(14, 6))
-        ax.scatter(predictedY, np.zeros_like(predictedY), color=plotcolors, s=150)
-
-        # Adjustments to make the plot clearer
-        ax.set_yticks([])
-        ax.set_xlim(0, 5)
-        ax.set_xlabel('Poor                         Neutral                                 Positive')
-        ax.set_title("Sentiment Magnitude Analysis")
+        #prep a pie chart
+        fig = px.pie(df_2, names='sentiment', title='Sentiment Analysis Results')
 
         # Show the plot in Streamlit
         st.pyplot(fig)
