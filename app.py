@@ -57,7 +57,6 @@ if uploaded_file:
             rating_counts,
             values='Count',
             names='Rating',
-            title="Review Rating Distribution",
             color_discrete_sequence=px.colors.qualitative.Pastel
         )
         st.plotly_chart(fig)
