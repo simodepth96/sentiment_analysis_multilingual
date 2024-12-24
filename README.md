@@ -27,5 +27,7 @@ Compared to other models, such as [cardiffnlp/twitter-roberta-base-sentiment-lat
 
 3. **Fine-tuned to Multilanguage text**. This model is able to capture the linguistic nuances from different langauges. Accuracy could be improved but still it does the job.
 
+## Useful Links
 
-
+1. Hop on the <a href="https://sentiment-analysis-multilingual.streamlit.app/" target="_blank" rel="noopener"> Multilingual Sentiment Analysis Review app</a>
+2. Find more at my <a href="https://seodepths.com/tools-for-seo/" target="_blank" rel="noopener">SEO Toolstation</a>
