@@ -45,9 +45,8 @@ st.sidebar.markdown(
 st.sidebar.subheader("💪 Strengths")
 st.sidebar.markdown(
     """
-    - Identify the top-traffic driving page templates of a website
-    - Zoom in on 20% of page templates bringing in 80% of organic traffic
-    - Works with large datasets, returns bar chart and lets you export the segmented output
+    - Accuracy of the Sentiment's Magnitude with a score ranging from 1 to 5 to cover sentiment nuances and disambiguate text classification
+    - Fine-tuned to Multilanguage text so it captures linguistic nuances from different languages
     """
 )
 
