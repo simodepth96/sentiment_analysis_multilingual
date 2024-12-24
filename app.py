@@ -52,7 +52,7 @@ st.sidebar.markdown(
 )
 
 # File upload widget
-uploaded_file = st.file_uploader("Upload your Excel file with a 'review' column", type=["xlsx"])
+uploaded_file = st.file_uploader("📤 Upload an Excel file with a 'review' column", type=["xlsx"])
 
 if uploaded_file:
     # Read the uploaded Excel file
