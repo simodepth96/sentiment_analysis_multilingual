@@ -32,7 +32,23 @@ def analyze_sentiment(review):
 st.title("Multilingual Sentiment Analysis on Product Reviews")
 st.markdown(
     "This app is designed to employ a distilBERT model to take on reviews in different languages and return a score ranged 1-5 to indicate the sentiment magnitude. "
-    "A pie chart with the distribution of the score is also returned. "
+    "A pie chart with the distribution of the score is also returned."
+)
+
+st.sidebar.subheader("🎯 Use Case")
+st.sidebar.markdown(
+    """
+    Score-based sentiment analysis of multilingual text, such as product reviews.
+    """
+)
+
+st.sidebar.subheader("💪 Strengths")
+st.sidebar.markdown(
+    """
+    - Identify the top-traffic driving page templates of a website
+    - Zoom in on 20% of page templates bringing in 80% of organic traffic
+    - Works with large datasets, returns bar chart and lets you export the segmented output
+    """
 )
 
 # File upload widget
