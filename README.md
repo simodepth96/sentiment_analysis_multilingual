@@ -18,7 +18,7 @@ For the purpose of this project, I've used the [Amazon Review Scraper Extension]
 
 Here's an example of the input file you should upload on the app
 
-![App Screenshot]()
+![App Screenshot](amazon_scraped_reviews.png)
 
 ## Key Advantages of this Model for Sentiment Analysis
 
